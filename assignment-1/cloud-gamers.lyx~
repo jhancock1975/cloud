@@ -105,6 +105,26 @@ We are a group of video game developers from several countries.
 \end_layout
 
 \begin_layout Standard
+In this essay, by the term, 
+\begin_inset Quotes eld
+\end_inset
+
+cloud,
+\begin_inset Quotes erd
+\end_inset
+
+ we mean the term as defiined in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-43"
+
+\end_inset
+
+.
+ In this work we assume Amazon Web Services is our cloud services provider.
+\end_layout
+
+\begin_layout Standard
 For this evauluation we determine the scope of activities that should be
  done in the cloud.
  We consider whether or not it would be appropriate for 
@@ -212,6 +232,14 @@ We are aware of compression techniques that do a wonderful job of reducing
  work on remote systems.
 \end_layout
 
+\begin_layout Standard
+The bottom line is that sending video over the internet potentially means
+ sending large amounts of data over the internet.
+ We should avoid sending more video over the network than necessary as a
+ way to allocate more of network resources to activities where using the
+ network absolutely necessary.
+\end_layout
+
 \begin_layout Subsubsection*
 Wasting Money
 \end_layout
@@ -224,9 +252,10 @@ In this section we look at the cost of a resonably powerful workstation
 
 \begin_layout Standard
 We are assuming here that our team of developers is working on PC games.
- Cost analysis of console development kits or other video game platforms
- is outside the scope of this essay.
- 
+ Presently, we are not aware of cloud based offerings of specialized systems
+ such as video game console development kits.
+ The cloud based virtual machine offerings that we know of are alternatives
+ to using PC's.
 \end_layout
 
 \begin_layout Standard
@@ -313,6 +342,169 @@ Surprisingly, this is very close to the cost of the Dell Alienware Aurora
 Thus we have shown that we can field developers high end systems and save
  approximately 30% of the cost of fielding an equivalent virtual machine
  running on a cloud based platform.
+ The virtual machine dedicated to the write, compile, test development cycle
+ that is a large part of a developer's work is a waste of money in consideration
+ of what we have discussed above.
+\end_layout
+
+\begin_layout Section*
+What We Should Use the Cloud For
+\end_layout
+
+\begin_layout Standard
+We have gone to some lengths to show that relying entirely on the cloud
+ is not cost effective in terms of money or bandwidth.
+ However there are many use cases where relying on the cloud makes sense.
+\end_layout
+
+\begin_layout Subsection*
+Getting started
+\end_layout
+
+\begin_layout Standard
+If we are just starting up the international team, we need to use the cloud.
+ 
+\end_layout
+
+\begin_layout Standard
+For this use case, we are thinking of using the cloud at the software-as-a-servi
+ce (SAAS) level.
+ Two example services that come to mind are linkedin.com and odesk.com.
+ If we are looking to assemble a team of developers from around the world
+ we need to use services like these to locate, interview and select our
+ team members.
+ 
+\end_layout
+
+\begin_layout Standard
+Linkedin.com is a well known business oriented social networking that claims
+ to have over 300 million users
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-44"
+
+\end_inset
+
+.
+ Someone looking to assemble a team of programmers can use linkedin to post
+ employment opportunities and search for candidates.
+ Linkedin.com is only one example of software-as-a-service platforms one
+ can take advantage of to assemble a geographically dispersed team of video
+ game developers.
+\end_layout
+
+\begin_layout Standard
+Odesk.com is a site oriented to connecting freelance software developers
+ with customers in need of new software
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-45"
+
+\end_inset
+
+.
+ One strategy for assembling a team is to write project specifications in
+ a modular fashion and hire developers on medium to long term contracts
+ to implement different modules of the specification.
+ Services such as the one Odesk.com provides are a convenient way to hire
+ developers where the work to be done and cost for the work is negociated
+ up-front.
+ For some video game development teams and project goals, using a cloud
+ service like Odesk.com might be as far as the team leader would need to
+ go to assemble a team to accomplish the goals.
+\end_layout
+
+\begin_layout Standard
+Even if we are planning on a world tour to seek out the greatest programmers
+ in all the technology hot-spots we would be remiss in our search if we
+ did not include some of the business oriented social networking services
+ that are so widely and cheaply available.
+\end_layout
+
+\begin_layout Subsection*
+Getting together
+\end_layout
+
+\begin_layout Standard
+If the team is already assembled, there are more services we could use at
+ the software-as-a-service level for communicating.
+ Security and privacy concerns drive what we decide to use for communicating.
+\end_layout
+
+\begin_layout Subsubsection*
+If privacy and security is not a concern:
+\end_layout
+
+\begin_layout Standard
+If we do not care who is listening in to our conversations we can use any
+ free, software-as-a-service communications applications that are in such
+ wonderful abundance in this day and age.
+ Examples are Skype
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-46"
+
+\end_inset
+
+, and the Google Hangouts Plugin.
+ These are only two among dozens of possible applications one may use to
+ communicate far more cheaply than with traditional telephony.
+ If the video game project we are working on is a team of volunteers working
+ on a free, open source project where privacy and secrecy is not a concern,
+ then options abound.
+\end_layout
+
+\begin_layout Standard
+The caveat to using these services is that one must often agree to terms
+ of service that stipulate that the service provider is allowed to collect
+ data one stores in their cloud for further use.
+ The Google Privacy Policy states, 
+\begin_inset Quotes eld
+\end_inset
+
+We provide personal information to our affiliates or other trusted businesses
+ or persons to process it for us, based on our instructions and in compliance
+ with our Privacy Policy and any other appropriate confidentiality and security
+ measures.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-48"
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ So, not only is Google admitting they will collect data from its users,
+ but also they are stating that they provide it to third parties.
+ Suffice it to say, popular free-to-use, software-as-a-service communciations
+ applications are not private, and are probably not the best choice for
+ exchanging information like trade secrets.
+\end_layout
+
+\begin_layout Subsubsection*
+Secure Communications in the Cloud
+\end_layout
+
+\begin_layout Standard
+One might be tempted to make the assumption that a paid, cloud based communicati
+ons service would be secure.
+ We did some research into providers to find an example of a paid, video
+ conferencing service, 1Click.io.
+ This is from their privacy policy, 
+\begin_inset Quotes eld
+\end_inset
+
+We do not sell, trade, or otherwise transfer to outside parties your personally
+ identifiable information.
+ This does not include trusted third parties who assist us in operating
+ our website, conducting our business, or servicing you, so long as those
+ parties agree to keep this information confidential.
+\begin_inset Quotes erd
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -423,6 +615,133 @@ http://aws.amazon.com/ec2/faqs/
 \end_inset
 
 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-43"
+
+\end_inset
+
+
+\shape italic
+Special Publication 800-145 The NIST Definition of Cloud Computing,
+\shape default
+ The National Institute of Standards and Technology.
+ September 2011 [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-44"
+
+\end_inset
+
+Linkedin.com 2014 September 22.
+ 
+\shape italic
+The world's largest professional network: 300 million strong.
+
+\shape default
+ [Online] Available: http://www.linkedin.com/static?key=what_is_linkedin
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-45"
+
+\end_inset
+
+Odesk.com Inc..
+ 2014 September 22.
+ 
+\shape italic
+Get your job done - on demand
+\shape default
+.
+ [Online] Available: https://www.odesk.com/info/howitworks/client/
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-46"
+
+\end_inset
+
+Skype.com.
+ 2014 September 22.
+ 
+\shape italic
+Get together on a free group video call
+\shape default
+.
+ [Online] Available: http://www.skype.com/en/
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-47"
+
+\end_inset
+
+Google.com, Inc.2014 September 22.
+ 
+\shape italic
+About computer to computer voice and video chat
+\shape default
+.
+ [Online] Available: https://support.google.com/chat/answer/159499?hl=en
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-48"
+
+\end_inset
+
+Google.com, Inc.
+ 2014 September 22.
+ 
+\shape italic
+Privacy Policy
+\shape default
+.
+ [Online] Available: http://static.googleusercontent.com/media/www.google.com/en/us/
+intl/en/policies/privacy/google_privacy_policy_en.pdf
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-49"
+
+\end_inset
+
+1Click, Inc.
+ 2014 September 22.
+ 
+\shape italic
+Privacy Policy
+\shape default
+.
+ [Online] Available: https://1click.io/company/privacy-policy/
 \end_layout
 
 \end_body

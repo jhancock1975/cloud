@@ -105,6 +105,26 @@ We are a group of video game developers from several countries.
 \end_layout
 
 \begin_layout Standard
+In this essay, by the term, 
+\begin_inset Quotes eld
+\end_inset
+
+cloud,
+\begin_inset Quotes erd
+\end_inset
+
+ we mean the term as defiined in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-43"
+
+\end_inset
+
+.
+ In this work we assume Amazon Web Services is our cloud services provider.
+\end_layout
+
+\begin_layout Standard
 For this evauluation we determine the scope of activities that should be
  done in the cloud.
  We consider whether or not it would be appropriate for 
@@ -212,6 +232,14 @@ We are aware of compression techniques that do a wonderful job of reducing
  work on remote systems.
 \end_layout
 
+\begin_layout Standard
+The bottom line is that sending video over the internet potentially means
+ sending large amounts of data over the internet.
+ We should avoid sending more video over the network than necessary as a
+ way to allocate more of network resources to activities where using the
+ network absolutely necessary.
+\end_layout
+
 \begin_layout Subsubsection*
 Wasting Money
 \end_layout
@@ -224,9 +252,10 @@ In this section we look at the cost of a resonably powerful workstation
 
 \begin_layout Standard
 We are assuming here that our team of developers is working on PC games.
- Cost analysis of console development kits or other video game platforms
- is outside the scope of this essay.
- 
+ Presently, we are not aware of cloud based offerings of specialized systems
+ such as video game console development kits.
+ The cloud based virtual machine offerings that we know of are alternatives
+ to using PC's.
 \end_layout
 
 \begin_layout Standard
@@ -310,18 +339,447 @@ Surprisingly, this is very close to the cost of the Dell Alienware Aurora
 \end_layout
 
 \begin_layout Standard
-As noted earlier, the developer must have some equipment to access the cloud
- based services.
- We would want to field the developer equipment that we owned for reasons
- of protecting intellectual property.
- Allowing the developer to use equipment that we owned potentially gives
- us better legal standing with respect to claiming ownership of the intellectual
- property residing within the system the developer uses for her work.
+Thus we have shown that we can field developers high end systems and save
+ approximately 30% of the cost of fielding an equivalent virtual machine
+ running on a cloud based platform.
+ The virtual machine dedicated to the write, compile, test development cycle
+ that is a large part of a developer's work is a waste of money in consideration
+ of what we have discussed above.
+\end_layout
+
+\begin_layout Section*
+What We Should Use the Cloud For
 \end_layout
 
 \begin_layout Standard
-Given the cost savings we discoverd in the course of this discussion, as
- well as the advantage of fielding the developer equipment that we own
+We have gone to some lengths to show that relying entirely on the cloud
+ is not cost effective in terms of money or bandwidth.
+ However there are many use cases where relying on the cloud makes sense.
+\end_layout
+
+\begin_layout Subsection*
+Batch Processing
+\end_layout
+
+\begin_layout Standard
+It is conceivable that a video game development project would need to do
+ some highly parallel, compute intensive jobs, such as rendering video.
+ There are many interesting approaches to do these kinds of projects, but
+ to delve into them in detail is outside the scope of this essay.
+ One solution is to use Amazon's Elastic Map Reduce offering to do this
+ kind of batch processing 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-60"
+
+\end_inset
+
+.
+ However, we realized it is not cheap - we ran a six-node hadoop cluster
+ on EMR a few months ago and quickly realized the bill was going to be on
+ the order of hundreds of dollars if we left the cluster running - so we
+ shut it off.
+\end_layout
+
+\begin_layout Standard
+At the same time, it is definitely more cost-effective and space-effective
+ to rent a cluster of say, 100 virtual machines from Amazon for an hour
+ to do a highly parallel computation than it would be to purchase 100 Dell
+ Alienware Aurora PC's to do the same computation, let alone find the space
+ to put them all where we could get enough electricity to even turn them
+ all on.
+\end_layout
+
+\begin_layout Standard
+There are some special cases where computation is best done in the cloud,
+ batch processing that one can use Hadoop for is an example.
+\end_layout
+
+\begin_layout Subsection*
+Getting started
+\end_layout
+
+\begin_layout Standard
+If we are just starting up the international team, we need to use the cloud.
+ 
+\end_layout
+
+\begin_layout Standard
+For this use case, we are thinking of using the cloud at the software-as-a-servi
+ce (SAAS) level.
+ Two example services that come to mind are linkedin.com and odesk.com.
+ If we are looking to assemble a team of developers from around the world
+ we need to use services like these to locate, interview and select our
+ team members.
+ 
+\end_layout
+
+\begin_layout Standard
+Linkedin.com is a well known business oriented social networking that claims
+ to have over 300 million users
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-44"
+
+\end_inset
+
+.
+ Someone looking to assemble a team of programmers can use linkedin to post
+ employment opportunities and search for candidates.
+ Linkedin.com is only one example of software-as-a-service platforms one
+ can take advantage of to assemble a geographically dispersed team of video
+ game developers.
+\end_layout
+
+\begin_layout Standard
+Odesk.com is a site oriented to connecting freelance software developers
+ with customers in need of new software
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-45"
+
+\end_inset
+
+.
+ One strategy for assembling a team is to write project specifications in
+ a modular fashion and hire developers on medium to long term contracts
+ to implement different modules of the specification.
+ Services such as the one Odesk.com provides are a convenient way to hire
+ developers where the work to be done and cost for the work is negociated
+ up-front.
+ For some video game development teams and project goals, using a cloud
+ service like Odesk.com might be as far as the team leader would need to
+ go to assemble a team to accomplish the goals.
+\end_layout
+
+\begin_layout Standard
+Even if we are planning on a world tour to seek out the greatest programmers
+ in all the technology hot-spots we would be remiss in our search if we
+ did not include some of the business oriented social networking services
+ that are so widely and cheaply available.
+\end_layout
+
+\begin_layout Subsection*
+Getting together
+\end_layout
+
+\begin_layout Standard
+If the team is already assembled, there are more services we could use at
+ the software-as-a-service level for communicating.
+ Person to person and group communications is an example of a use case where
+ we would want to send video over the network, as opposed to doing game
+ development as we discussed above.
+ In this case, we would be willing to use bandwidth for video communications.
+ Personal experience shows that tense discussions about common topics in
+ software development, such as design approaches, can be diffused with voice
+ or face to face communications.
+ At times exchanging written communications only results in frustration
+ for all parties involved.
+ Security and privacy concerns drive what we decide to use for communicating.
+\end_layout
+
+\begin_layout Subsubsection*
+If privacy and security is not a concern:
+\end_layout
+
+\begin_layout Standard
+If we do not care who is listening in to our conversations we can use any
+ free, software-as-a-service communications applications that are in such
+ wonderful abundance in this day and age.
+ Examples are Skype
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-46"
+
+\end_inset
+
+, and the Google Hangouts Plugin.
+ These are only two among dozens of possible applications one may use to
+ communicate far more cheaply than with traditional telephony.
+ If the video game project we are working on is a team of volunteers working
+ on a free, open source project where privacy and secrecy is not a concern,
+ then options abound.
+\end_layout
+
+\begin_layout Standard
+The caveat to using these services is that one must often agree to terms
+ of service that stipulate that the service provider is allowed to collect
+ data one stores in their cloud for further use.
+ The Google Privacy Policy states, 
+\begin_inset Quotes eld
+\end_inset
+
+We provide personal information to our affiliates or other trusted businesses
+ or persons to process it for us, based on our instructions and in compliance
+ with our Privacy Policy and any other appropriate confidentiality and security
+ measures.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-48"
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ So, not only is Google admitting they will collect data from its users,
+ but also they are stating that they provide it to third parties.
+ Suffice it to say, popular free-to-use, software-as-a-service communciations
+ applications are not private, and are probably not the best choice for
+ exchanging information like trade secrets.
+\end_layout
+
+\begin_layout Subsubsection*
+Secure Communications in the Cloud
+\end_layout
+
+\begin_layout Standard
+One might be tempted to make the assumption that a paid, cloud based communicati
+ons service would be secure.
+ Some investigation shows that a cloud provided virtual machine to host
+ communications may be the only way to have a guarantee of security.
+\end_layout
+
+\begin_layout Standard
+We did some research into providers to find an example of a paid, video
+ conferencing service, 1Click.
+ This is from their privacy policy, 
+\begin_inset Quotes eld
+\end_inset
+
+We do not sell, trade, or otherwise transfer to outside parties your personally
+ identifiable information.
+ This does not include trusted third parties who assist us in operating
+ our website, conducting our business, or servicing you, so long as those
+ parties agree to keep this information confidential.
+\begin_inset Quotes erd
+\end_inset
+
+ So, while somewhat reassuring, we are not receiving a guarantee that 1Click
+ is not going to share some of our data with others in their privacy policy.
+ If we want to be sure that information about our conversations is not going
+ to be leaked, we can install our own communications server on a cloud provided
+ virtual machine, such as an AWS instance.
+ 
+\end_layout
+
+\begin_layout Standard
+We found two examples of communications server software one could install
+ on an AWS instance to provide a team of developers a way to communicate.
+ The first example is a free, as in available at no cost, open source server.
+ We have not evaluated this software and we are not recommending it.
+ We are merely providing it as an example.
+ The software is called red5chat.
+ The source code is available for download on SourceForge.com
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50"
+
+\end_inset
+
+.
+ In theory, one could install this software on an AWS instance and provide
+ users a way to communicate using video.
+ If the users are connecting to the instance over a VPN, then the communcations
+ are reasonably secure, and we can be sure the service provider is not disclsing
+ our communciations data to third parties, because we are the provider.
+\end_layout
+
+\begin_layout Standard
+If we are inclined to spend some money on a communications solution, we
+ have an example of another way of taking the same approach of installing
+ our own communications software.
+ Cisco Jabber
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-51"
+
+\end_inset
+
+ is an example of a paid server solution.
+ We see in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-51"
+
+\end_inset
+
+ a link to request a price for the software.
+ This usually means the price is high, and the vendor is trying to ascertain
+ the maximum amount the potential customer is willing to pay before providing
+ a quote.
+ However, the same web page lists features that indicates Jabber integrates
+ well with other software and provides the features professionals expect
+ when collaborating.
+ At the same time, a quick look over the installation guide 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-52"
+
+\end_inset
+
+indicates that setting up a Jabber server is an involved process.
+ This illustrates a good point about the trade off in using the cloud for
+ secure communications: the more security we require, the more involved
+ we have to be in maintaining the infrastructure.
+\end_layout
+
+\begin_layout Subsection*
+Software Development
+\end_layout
+
+\begin_layout Subsubsection*
+Project management Systems
+\end_layout
+
+\begin_layout Standard
+Until now, we have danced around the primary purpose of what an international
+ team of video game developers: to write code!
+\end_layout
+
+\begin_layout Standard
+While we made the case that frequent development tasks such as compiling
+ and testing source code should not be done entirely in the cloud, there
+ there are some aspects of the software development process that we absoultely
+ recommend using the cloud for.
+\end_layout
+
+\begin_layout Standard
+In my personal experience, software development teams use a workflow management
+ system to collaborate on projects.
+ Examples are Jira
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-53"
+
+\end_inset
+
+ (paid), and Apache Bloodhound 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-54"
+
+\end_inset
+
+(free).
+\end_layout
+
+\begin_layout Standard
+It makes sense to host the software we use to collaborate on projects in
+ the cloud because it is centrally located.
+\end_layout
+
+\begin_layout Standard
+The information in such a system can be highly sensitive.
+ Here is where developers are collaborating on design and implementation.
+ If the team is not welcoming public participation in the project then we
+ desire a high level of security.
+ Installing one of these collaboration systems in an AWS instance that is
+ accessed in a secure fashion is one way to protect our developers' collaboratio
+n.
+ It also enables us to maintain ownership of the data in the collaboration
+ management system, but make it highly available at the same time.
+\end_layout
+
+\begin_layout Subsubsection*
+Version Control / Source Code Repositories
+\end_layout
+
+\begin_layout Standard
+Version control is an indispensible tool for the software development process.
+ A discussion of the benefits of using version control is outside the scope
+ of this essay, however we found a discussion in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-56"
+
+\end_inset
+
+ that is informative for any curious readers.
+ Development teams that want to create open source projects have many free
+ options, such as GitHub
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-55"
+
+\end_inset
+
+, or Google Code.
+ However just as is the case with communications, the code under version
+ control these services provide is not stored in a secure manner.
+ In fact, GitHub explictly states that the projects I create with it are
+ publicly available, and that I am free to pay to make my repositories private
+ if I am so inclined.
+\end_layout
+
+\begin_layout Standard
+For the remainder of this section we will assume that the team of international
+ software developers is working on a commercial project where the software
+ is valuable intellectual property.
+\end_layout
+
+\begin_layout Standard
+Version control software, as a source code repository can be highly sensitive,
+ perhaps even more so than the data in project management systems described
+ above.
+ In fact, project management systems often integrate with version control,
+ so that changes can be linked to projects for tasks such as code reviews.
+\end_layout
+
+\begin_layout Standard
+On the one hand, a central repository for software for developers to use
+ to manage changes to source code is something we should not do without.
+ So it makes sense to host the version control software in the cloud, because
+ it needs to be available to a team of programmers scattered over the globe.
+ Source code is often the most valuable.
+ It is critical to protect, and not to be leaked to competitiors.
+ We feel a good solution is like what we have described above, install the
+ version control software on a cloud provided virtual machine and allow
+ access in a secure fashion.
+\end_layout
+
+\begin_layout Standard
+In our personal experience, setting up a version control service (Subversion
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-59"
+
+\end_inset
+
+ in our case) in Linux is not over complicated and can be accomplished in
+ about one hour.
+ We recommend our international team of software developers use a secured
+ cloud based server to host their version control.
+ 
+\end_layout
+
+\begin_layout Standard
+The collaborative nature of version control systems means they should be
+ hosted on line, available over the internet.
+ However in the case of proprietary software, the possibly highly sensitive
+ nature of what the version control system contains - it essentially stores
+ the product we plan to sell - means the version contorl system should be
+ secured.
+ Installing and maintaining our own version control system on a cloud based
+ virtual machine is a good way to balance these concerns.
+\end_layout
+
+\begin_layout Section*
+Conclusions
+\end_layout
+
+\begin_layout Standard
+In this essay we have discussed what an international team of video gamedevelope
+rs should use the cloud for, and what they should not use the cloud for.
+ A team of video game developers should probably not use the cloud for the
+ most frequent tasks of writing and testing, and debugging source code.
+ However, it could makes sense for developers to use the cloud for some
+ forms of computation.
+ Short running, highly parallel batch jobs are an example.
+ It also makes a great deal of sense to use the cloud for software used
+ in collaboration.
+ There are freely available 
 \end_layout
 
 \begin_layout Bibliography
@@ -427,6 +885,486 @@ status collapsed
 \begin_layout Plain Layout
 
 http://aws.amazon.com/ec2/faqs/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-43"
+
+\end_inset
+
+
+\shape italic
+Special Publication 800-145 The NIST Definition of Cloud Computing,
+\shape default
+ The National Institute of Standards and Technology.
+ September 2011 [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-44"
+
+\end_inset
+
+Linkedin.com 2014 September 22.
+ 
+\shape italic
+The world's largest professional network: 300 million strong.
+
+\shape default
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.linkedin.com/static?key=what_is_linkedin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-45"
+
+\end_inset
+
+Odesk.com Inc..
+ 2014 September 22.
+ 
+\shape italic
+Get your job done - on demand
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.odesk.com/info/howitworks/client/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-46"
+
+\end_inset
+
+Skype.com.
+ 2014 September 22.
+ 
+\shape italic
+Get together on a free group video call
+\shape default
+.
+ [Online] 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+Available: http://www.skype.com/en/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-47"
+
+\end_inset
+
+Google.com, Inc.2014 September 22.
+ 
+\shape italic
+About computer to computer voice and video chat
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://support.google.com/chat/answer/159499?hl=en
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-48"
+
+\end_inset
+
+Google.com, Inc.
+ 2014 September 22.
+ 
+\shape italic
+Privacy Policy
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://static.googleusercontent.com/media/www.google.com/en/us/intl/en/policies/priv
+acy/google_privacy_policy_en.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-49"
+
+\end_inset
+
+1Click, Inc.
+ 2014 September 22.
+ 
+\shape italic
+Privacy Policy
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://1click.io/company/privacy-policy/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-50"
+
+\end_inset
+
+SourceForge.net 2014 September 22.
+ 
+\shape italic
+red5chat
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://sourceforge.net/projects/red5chat/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-51"
+
+\end_inset
+
+Cisco Inc.
+ 2014 September 22.
+ 
+\shape italic
+Cisco Jabber for Windows: Enterprise Collaboration Made Simple Data Sheet.
+
+\shape default
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.cisco.com/c/en/us/products/collateral/unified-communications/jabber-win
+dows/data_sheet_c78-704195.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-52"
+
+\end_inset
+
+Cisco Inc.
+ 2014 September 22.
+ Cisco Jabber for Windows 9.1.x Installation and Configuration Guide.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+Cisco Jabber for Windows 9.1.x Installation and Configuration Guide
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-53"
+
+\end_inset
+
+Atlassian, Inc.
+ 2014 September 22.
+ 
+\shape italic
+Jira
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://www.atlassian.com/software/jira
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-54"
+
+\end_inset
+
+The Apache Software Foundation.
+ 2014 September 22.
+ 
+\shape italic
+Apache Bloodhound
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://bloodhound.apache.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-55"
+
+\end_inset
+
+GitHub, Inc.
+ 2014 September 22.
+ GitHub.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-56"
+
+\end_inset
+
+GitHub, Inc.
+ 2014 September 22.
+ 
+\shape italic
+Getting Started - Git Basics
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://git-scm.com/book/en/Getting-Started-Git-Basics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-57"
+
+\end_inset
+
+Google.com, Inc.
+ 2014 September 22.
+ Getting Started.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://code.google.com/p/support/wiki/GettingStarted
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-58"
+
+\end_inset
+
+Atlassian, Inc.
+ 2014 September 22.
+ Git Integration Plugin for JIRA.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://marketplace.atlassian.com/plugins/com.xiplink.jira.git.jira_git_plugin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-59"
+
+\end_inset
+
+The Apache Software Foundation.
+ 2014 September 22.
+ Apache Subversion.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://subversion.apache.org/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-60"
+
+\end_inset
+
+Amazon.com, Inc.
+ 2014 September 22.
+ Amazon EMR.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://aws.amazon.com/elasticmapreduce/?sc_channel=PS&sc_campaign=AWS_Free_Tier_20
+13&sc_country=US&sc_publisher=Google&sc_medium=nb_test_analytics_EMR_e-elastic_m
+ap_reduce&sc_content=47808494202&sc_detail=Elastic%20mapreduce&sc_category=compu
+te_networking&sc_segment=EMR&sc_matchtype=e
 \end_layout
 
 \end_inset
