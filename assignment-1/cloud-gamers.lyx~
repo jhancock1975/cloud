@@ -104,7 +104,24 @@ We are a group of video game developers from several countries.
 
 \end_layout
 
+\begin_layout Standard
+For this evauluation we determine the scope of activities that should be
+ done in the cloud.
+ We consider whether or not it would be appropriate for 
+\shape italic
+all
+\shape default
+ activities to be done on a cloud based platform, or some of them.
+ Pertinent to this consideration is the cost of activities.
+ We use pricing data to bolster our recommendations.
+ We discuss which activities could be done in the cloud.
+\end_layout
+
 \begin_layout Part*
+Scope of Activities in the Cloud
+\end_layout
+
+\begin_layout Section*
 One Hundred Percent In the Cloud?
 \end_layout
 
@@ -122,7 +139,7 @@ This would be unneccessary and wasteful.
  
 \end_layout
 
-\begin_layout Section*
+\begin_layout Subsection*
 It is not necessary...
 \end_layout
 
@@ -156,12 +173,256 @@ Since developers have to have some sort of machine to participate in development
  projects, the most resource intensive activities should be done locally.
 \end_layout
 
-\begin_layout Section*
+\begin_layout Subsection*
 It would be wasteful...
 \end_layout
 
 \begin_layout Standard
-There is another fact
+There are two resources that would be wasted: money and bandwidth.
+\end_layout
+
+\begin_layout Subsubsection*
+Wasting Bandwidth
+\end_layout
+
+\begin_layout Standard
+We are discussing video game development.
+ We point this out to underscore the key word video.
+ In general we must allow for the amount of data involved in creating, recording
+, transmitting, displaying video to be large.
+ This is an inescapble consequence of the fact that a good digital video
+ is a series of digital images, a quality digital image is a collection
+ of millions of pixels, where we need three bytes of storage for every pixel
+ if we want to get a realistic palette of colors.
+ If developers are working on video in a way that requires the video to
+ be sent from a remote location for every iteration of their work, then
+ large amounts of data are getting dowloaded unecessarily due to the data-intens
+ive nature of video.
+\end_layout
+
+\begin_layout Standard
+We are aware of compression techniques that do a wonderful job of reducing
+ the size of digital video.
+ However, during the initial phases of development for a new game, developers
+ reasonably would not want any unnecessary factors impinging on the quality
+ of their work.
+ This enables developers to choose the compression scheme that best suits
+ their work when the work is more mature.
+ This is another reason we would not want developers doing video-related
+ work on remote systems.
+\end_layout
+
+\begin_layout Subsubsection*
+Wasting Money
+\end_layout
+
+\begin_layout Standard
+In this section we look at the cost of a resonably powerful workstation
+ suitable for video game development and compare that to the cost of using
+ an equivalent machine available from Amazon Web Services.
+\end_layout
+
+\begin_layout Standard
+We are assuming here that our team of developers is working on PC games.
+ Cost analysis of console development kits or other video game platforms
+ is outside the scope of this essay.
+ 
+\end_layout
+
+\begin_layout Standard
+For a game development system, it makes sense to use a system for playing
+ video games.
+ So, we choose a high-end Alienware system from Dell, with a 24 inch monitor.
+ The price of this system on Dell.com at the time of this writing is $2,597.99
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-39"
+
+\end_inset
+
+.
+ We are considering an international team of developers, so we will add
+ another $200.00 for shipping.
+ Also, debugging graphical applications often requires a separate monitor
+ because user interface actions, such as key presses and mouse clicks a
+ developer would need to do to switch to an IDE window while the game is
+ active can disrupt the debugging process.
+ So, we add a second 24 inch monitor to the list of equipment our developer
+ will need.
+ Priceline.com lists several at various prices, we will assume purchase of
+ a monitor plus shipping will come out to $300.00.
+ This gives us an estimated cost of $3,097.99 for the equipment we would
+ need to provide to a programmer for his video game development work.
+ 
+\end_layout
+
+\begin_layout Standard
+The Dell web site lists the following metrics for components that we will
+ need for determining which instance to select from AWS to get an eqivalent
+ machine: 16 GB random access memory, 2 TB hard drive, 4 core Intel i7 processor.
+\end_layout
+
+\begin_layout Standard
+We use 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-41"
+
+\end_inset
+
+ to find a price for the equivalent system.
+ The closest equivalent we find is the m3.Xlarge instance.
+ The AWS FAQ recommends fixed performance instances for resource intensive
+ applications 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-42"
+
+\end_inset
+
+.
+ It has 4 vCPU's, 15 GB random access memory, and 80 GB storage.
+ This is far less storage than the Dell machine we are considering.
+ We could factor in the cost of using S-3 storage to get an equivalent amount
+ of storage space for the Amazon m3.Xlarge instance, but we will ignore that
+ cost for the purposes of this estimate.
+\end_layout
+
+\begin_layout Standard
+Amazon prices usage of the instance at $0.28 per hour.
+ We will assume that the instance must remain on constantly to accomodate
+ developer's inspiration that could occur at any time.
+ The cost of leaving the instance running for one year (
+\begin_inset Formula $\$0.28\times24\times365$
+\end_inset
+
+) is $2,452.80.
+ 
+\end_layout
+
+\begin_layout Standard
+Surprisingly, this is very close to the cost of the Dell Alienware Aurora
+ - $3,097.99.
+ However, we can reasonably amortize the cost of the Aurora over two years.
+ Thus, the annual cost for using the Aurora is approximately $1549.0.
+ We therefore realize a savings of $903.80 anually if we field the developer
+ the Dell Alienware Aurora as opposed to the m3.Xlarge AWS instance.
+\end_layout
+
+\begin_layout Standard
+Thus we have shown that we can field developers high end systems and save
+ approximately 30% of the cost of fielding an equivalent virtual machine
+ running on a cloud based platform.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-39"
+
+\end_inset
+
+Dell, Inc.
+ 2014 September 21.
+ 
+\shape italic
+Alienware Aurora.
+ 
+\shape default
+[Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+http://www.dell.com/us/p/alienware-aurora-r4/pd?oc=dpcwny2&model_id=alienware-auro
+ra-r4
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-40"
+
+\end_inset
+
+Pricewatch.com 2014 September 21.
+ 
+\shape italic
+Home: Monitors: 24in
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.pricewatch.com/price/monitors/lcd_24in
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-41"
+
+\end_inset
+
+Amazon.com, Inc.
+ 2014 September 20, 
+\shape italic
+Amazon EC2 Pricing.
+
+\shape default
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://aws.amazon.com/ec2/pricing/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-42"
+
+\end_inset
+
+Amazon.com, Inc.
+ 2014 September 21.
+ 
+\shape italic
+Amazon EC2 FAQs, Burstable Performance Instances
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://aws.amazon.com/ec2/faqs/
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
