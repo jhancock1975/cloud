@@ -1,0 +1,168 @@
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyhdr}% http://ctan.org/pkg/fancyhdr
+\fancyhead{}% Clear all headers
+%\fancyfoot{}% Clear all footers
+\fancyhead[C]{John Hancock}% Place "John Hancock" in Center of header
+\renewcommand{\headrulewidth}{0pt}% Remove header rule
+%\renewcommand{\footrulewidth}{0pt}% Remove footer rule
+\pagestyle{fancy}% Set page style to "fancy"
+\end_preamble
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Video Game Development in the Cloud
+\end_layout
+
+\begin_layout Standard
+John Hancock
+\end_layout
+
+\begin_layout Standard
+Florida Atlantic University
+\end_layout
+
+\begin_layout Standard
+jhancoc4@fau.edu
+\end_layout
+
+\begin_layout Standard
+COT 5930 Cloud Computing
+\end_layout
+
+\begin_layout Standard
+Assignment 1
+\end_layout
+
+\begin_layout Standard
+September 
+\begin_inset Formula $30^{th}$
+\end_inset
+
+, 2014
+\end_layout
+
+\begin_layout Part*
+Introduction
+\end_layout
+
+\begin_layout Standard
+This is a feasibility study on the subject of whether or not a cloud computing
+ environment would be suitable for an international team of video game developer
+s.
+ This study fulfills the requirement in Assignment 1, 
+\begin_inset Quotes eld
+\end_inset
+
+We are a group of video game developers from several countries.
+ Evaluate if it would make sense for us to use cloud computing to build
+ games.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+One Hundred Percent In the Cloud?
+\end_layout
+
+\begin_layout Standard
+The first thought we had for doing this evaluation was that we are proposing
+ to have developers write, compile, and exectute code on virtual machines
+ on a platform like Amazon Web Services as part of the game development
+ process.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+This would be unneccessary and wasteful.
+ 
+\end_layout
+
+\begin_layout Section*
+It is not necessary...
+\end_layout
+
+\begin_layout Standard
+It is not necessary for developers to do all of their work on virtual machines
+ because they have to use some kind of device to access internet based services
+ in the first place.
+\end_layout
+
+\begin_layout Standard
+We feel that activities that require high utilization of system resources
+ should be carried out on physical machines that are within a few meters
+ of the developer.
+ This would include compiling source code, running unit tests, and hand
+ testing larger units of execution.
+ 
+\end_layout
+
+\begin_layout Standard
+Personal experience has shown the writer that these kinds of resource intensive
+ tasks are more conveniently performed on systems physically close by, espeicall
+y when the need for troubleshooting arises.
+ When programming a remote system, there is a temptation to blame network
+ latency for poor performance.
+ One's ego can blind one to the fact of the inferiority of his creations.
+ 
+\end_layout
+
+\begin_layout Standard
+Since developers have to have some sort of machine to participate in development
+ projects, the most resource intensive activities should be done locally.
+\end_layout
+
+\begin_layout Section*
+It would be wasteful...
+\end_layout
+
+\begin_layout Standard
+There is another fact
+\end_layout
+
+\end_body
+\end_document
