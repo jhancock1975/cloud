@@ -363,7 +363,8 @@ Batch Processing
 
 \begin_layout Standard
 It is conceivable that a video game development project would need to do
- some highly parallel, compute intensive jobs, such as rendering video.
+ some highly parallel, compute intensive jobs, such as using raytracing
+ to render images.
  There are many interesting approaches to do these kinds of projects, but
  to delve into them in detail is outside the scope of this essay.
  One solution is to use Amazon's Elastic Map Reduce offering to do this
@@ -751,7 +752,7 @@ key "key-59"
  about one hour.
  We recommend our international team of software developers use a secured
  cloud based server to host their version control.
- 
+ We also found this short guide on setting up and SVN service on AWS: 
 \end_layout
 
 \begin_layout Standard
@@ -1371,6 +1372,62 @@ http://aws.amazon.com/elasticmapreduce/?sc_channel=PS&sc_campaign=AWS_Free_Tier_
 13&sc_country=US&sc_publisher=Google&sc_medium=nb_test_analytics_EMR_e-elastic_m
 ap_reduce&sc_content=47808494202&sc_detail=Elastic%20mapreduce&sc_category=compu
 te_networking&sc_segment=EMR&sc_matchtype=e
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-61"
+
+\end_inset
+
+P.
+ Wongvibulsin 2010.
+ 
+\shape italic
+MapReducing Raytracing with Hadoop
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+P.users.csc.calpoly.edu/~zwood/teaching/csc473/finalw10/pwongvib/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-62"
+
+\end_inset
+
+Anonymous.
+ 2012 December 16.
+ 
+\shape italic
+Stuff I Do
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://technocratme.blogspot.com/2012/12/setting-up-svn-on-aws-ec2-instance.html
 \end_layout
 
 \end_inset

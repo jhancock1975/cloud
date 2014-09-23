@@ -363,7 +363,8 @@ Batch Processing
 
 \begin_layout Standard
 It is conceivable that a video game development project would need to do
- some highly parallel, compute intensive jobs, such as rendering video.
+ some highly parallel, compute intensive jobs, such as using raytracing
+ to render images.
  There are many interesting approaches to do these kinds of projects, but
  to delve into them in detail is outside the scope of this essay.
  One solution is to use Amazon's Elastic Map Reduce offering to do this
@@ -779,7 +780,13 @@ rs should use the cloud for, and what they should not use the cloud for.
  Short running, highly parallel batch jobs are an example.
  It also makes a great deal of sense to use the cloud for software used
  in collaboration.
- There are freely available 
+ There are freely available services we can use to collaborate on projects
+ if we are not concerned about protecting intellectual property.
+ There are paid services we can use if we are willing to trust providers.
+ We can install and maintain our own collaborative software services on
+ cloud based machines if we cannot afford to trust providers.
+ It makes sense for the international game development team to use the cloud,
+ for the colloaborative aspects of their work.
 \end_layout
 
 \begin_layout Bibliography
@@ -1365,6 +1372,34 @@ http://aws.amazon.com/elasticmapreduce/?sc_channel=PS&sc_campaign=AWS_Free_Tier_
 13&sc_country=US&sc_publisher=Google&sc_medium=nb_test_analytics_EMR_e-elastic_m
 ap_reduce&sc_content=47808494202&sc_detail=Elastic%20mapreduce&sc_category=compu
 te_networking&sc_segment=EMR&sc_matchtype=e
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-61"
+
+\end_inset
+
+P.
+ Wongvibulsin 2010.
+ 
+\shape italic
+MapReducing Raytracing with Hadoop
+\shape default
+.
+ [Online] Available: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+P.users.csc.calpoly.edu/~zwood/teaching/csc473/finalw10/pwongvib/
 \end_layout
 
 \end_inset
